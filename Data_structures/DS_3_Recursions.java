@@ -107,12 +107,14 @@ public class DS_3_Recursions {
     // using recursion for binary search
     static int binarySearchRecursive(int[] arr,int target, int start, int end){
 
-        if(start > end) return -1;      // break case
+        if(start > end) return -1;      // break condition, if answer not found
         int mid = start + (end-start)/2;
 
         // base case
         if(arr[mid] == target) return mid;
 
+    
+    // make sure to return the result, if the function has a return type
         if(target > arr[mid]) return binarySearchRecursive(arr, target, mid+1, end);
         else return binarySearchRecursive(arr, target, start, mid-1);
     }
