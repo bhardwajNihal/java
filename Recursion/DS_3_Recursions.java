@@ -1,3 +1,6 @@
+package Recursion;
+import java.util.Arrays;
+
 public class DS_3_Recursions {
     
     public static void main(String[] args) {
@@ -12,8 +15,26 @@ public class DS_3_Recursions {
         // // }
         // System.out.println(fibonacci(3));
 
-        int[] arr = {1,3,4,5,8,10,14,16};
-        System.out.println(binarySearchRecursive(arr, 10, 0, arr.length-1));
+        // int[] arr = {1,3,4,5,8,10,14,16};
+        // System.out.println(binarySearchRecursive(arr, 10, 0, arr.length-1));
+
+
+
+        // printnto1(5);
+        // print1tonBetter( 5);
+        // printnto1ton(5);
+
+        //  System.out.println(factorial(4));
+        //  System.out.println(sum(10));
+        //  System.out.println(sumOfDigits(1234));
+        //  System.out.println(productOfDigits(1234));
+
+        // reverse(1000);
+        // reverse2(1234);
+        // System.out.println(rev);
+
+        System.out.println(palindromeNum(1233521));
+
     }
 
 
@@ -36,6 +57,8 @@ public class DS_3_Recursions {
     // till it hits the base case
         // base case is nothing but a condition where function knows the answer straight away
 
+    // Space complexity : O(N) as n no. of stacks are created everytime
+    // time : O(N) as function is called n times for n parameters
     
 
     // basic example of function calling another function inside it
@@ -118,4 +141,131 @@ public class DS_3_Recursions {
         if(target > arr[mid]) return binarySearchRecursive(arr, target, mid+1, end);
         else return binarySearchRecursive(arr, target, start, mid-1);
     }
+
+
+
+    // printing n to 1 
+    static void printnto1(int n){
+
+        if(n==1){
+            System.out.print(n + " ");
+            return;
+        };
+        System.out.print(n + " ");
+        printnto1(n-1);
+    }
+
+
+    // print 1 to n
+    static void print1ton(int n1, int n2){
+
+        if(n1 == n2){
+            System.out.print(n1 + " ");
+            return;
+        }
+        System.out.print(n1 + " ");
+        print1ton(n1+1, n2);
+    }
+
+
+    // better approach to print 1 to n
+    static void print1tonBetter(int n){
+
+        if(n==0) return;
+
+        // dry run gives the utmost clarity, here the next function is called 1st
+        // and the num is printed when the previous call is over
+        print1tonBetter(n-1);
+        System.out.println(n);
+    }
+
+    //print n to 1 then 1 to n
+    static void printnto1ton(int n){
+
+        if(n==0) return;
+    
+    // will print the current num in decreasing order aswell
+    // while returning the increasing order will also get printed
+        System.out.println(n);
+        printnto1ton(n-1);
+        System.out.println(n);
+    }
+
+
+    // factorial
+    static int factorial(int num){
+
+        if(num == 0 || num == 1) return 1;
+
+        return num * factorial(num-1);
+    }
+
+    // sum 1 to n
+    static int sum(int num){
+
+        if(num <= 1) return num;
+
+        return num + sum(num -1);
+    }
+
+    // sum of digits
+    static int sumOfDigits(int num){
+
+        if(num/10 == 0) return num;     // when the last digit is left, return that that i.e. of 1234, repeatedly dividing by 10 --> when at last 1 will remain just return 1
+
+        return num%10 + sumOfDigits(num/10);
+    }
+
+    //product of digits
+    static int productOfDigits(int num){
+
+        if(num/10 == 0) return num;     // when the last digit is left, return that that i.e. of 1234, repeatedly dividing by 10 --> when at last 1 will remain just return 1
+
+        return num%10 * productOfDigits(num/10);
+    }
+
+
+    // a case of stack overflow
+    static void fun(int num){
+        if(num==0) return;
+        System.out.println(num);
+        fun(num--);         // it will call the function with the same num repeatedly, as it post decrement
+    }
+
+
+    // reverse a num 
+    static void reverse(int num){
+
+        if(num/10==0){
+            System.out.print(num);
+            return;
+        }
+        System.out.print(num%10);
+        reverse(num/10);
+    }
+
+    // but the above method is just printing the no. in reverse order
+    // approach 2 to actually reverse the number
+
+    static int rev = 0;     // variable declared globally so as to retain value
+    static void reverse2(int num){
+        
+        if(num == 0) return;
+
+        rev = rev*10 + (num%10);
+
+        reverse2(num/10);
+    }
+
+
+
+
+    // palindrome check to a number
+    // 1st approach is simple just compare to its reverse
+    static boolean palindromeNum(int num){
+
+        reverse2(num);
+        return rev == num;
+    }
+    
 }       
