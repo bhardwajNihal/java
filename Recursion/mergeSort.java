@@ -13,14 +13,23 @@ public class mergeSort {
         // System.out.println(Arrays.toString(merge(arr1, arr2)));
 
 
-        int[] arr = {4,2,6,1,5,3};
-        System.out.println(Arrays.toString(mergeSortAlgo(arr)));
+        // int[] arr = {4,2,6,1,5,3};
+        // System.out.println(Arrays.toString(mergeSortAlgo(arr)));
     }
 
 
     // merge sort algo
     // divide the array repeatedly, till each half is sorted
     // then merge the two sorted halves till the whole array is sorted
+
+    // Time complexity
+        // everytime the array is halved, so the no. of level will be log(N)
+        // and on every level the array is merged so in each level, there are n comparisons
+        // this makes is O(N.log(N))
+    // space complexity 
+        // at any given point of time there will be n function call in the stack 
+        // therefore, O(N)
+
     static int[] mergeSortAlgo(int[] arr) {
 
         if(arr.length==1) return arr;
@@ -75,8 +84,6 @@ public class mergeSort {
         }
         return mergedArr;
     }
-
-
 
 
 }
