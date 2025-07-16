@@ -7,7 +7,7 @@ public class Intro {
         
 
     }
-
+}
 
 // todos : 
     // classes✅
@@ -35,7 +35,7 @@ public class Intro {
                 this.age = age;
             }
         }  //if new Person() is created;, it will call the no-argument constructor, which then calls the second constructor.
-
+    
         
     // new keyword, memory allocation✅
 
@@ -43,8 +43,8 @@ public class Intro {
     // wrapper classes✅
         // Wrapper classes lets us treat primitive types as objects.
         // it lets us use various utility methods to manipulate the primitive values
-            int primitive = 5;
-            Integer object = Integer.valueOf(primitive); // Wrap int in Integer
+            // int primitive = 5;
+            // Integer object = Integer.valueOf(primitive); // Wrap int in Integer
 
 
     // final keyword✅
@@ -52,9 +52,9 @@ public class Intro {
             // Final variable: Value cannot be changed after it’s set.
             // Final method: Cannot be overridden by subclasses.
             // Final class: Cannot be inherited from.
-            final int x = 10;
+                // final int x = 10;
             // x = 20; // Error: cannot assign
-            final class Animal {}
+                // final class Animal {}
             // class Dog extends Animal {} // Error: cannot inherit
 
 
@@ -66,9 +66,9 @@ public class Intro {
 
     // finalize✅
         // This is a special method you can define for cleanup actions just before the object is garbage-collected.
-        protected void finalize() throws Throwable {
-            System.out.println("Object is being garbage collected!");
-        }
+        // protected void finalize() throws Throwable {
+        //     System.out.println("Object is being garbage collected!");
+        // }
 
 
     // packages✅
@@ -86,46 +86,46 @@ public class Intro {
     // static keyword✅
         // static variable
             // A variable shared by all instances of a class (like a property common to all dogs: “species”).
-            class Dog {
-                static String species = "Canine";
-            }
+            // class Dog {
+            //     static String species = "Canine";
+            // }
 
         // static methods
             // A method that belongs to the class, not an object. Call it without an instance.
-                class MathUtil {
-                    static int add(int a, int b) { return a + b; }
-                }
+                // class MathUtil {
+                //     static int add(int a, int b) { return a + b; }
+                // }
                 // MathUtil.add(2,3);          // No need for MathUtil object
 
 
         // static block✅
             // A block that runs once when the class is loaded.
-                class Demo {
-                    static int x;
-                    static {
-                        x = 10; // Runs when class loads
-                    }
-                }
+                // class Demo {
+                //     static int x;
+                //     static {
+                //         x = 10; // Runs when class loads
+                //     }
+                // }
 
 
     // non-static member inside static
         // cannot directly access non-static (instance) variables/methods from a static method/block
-                class Test {
-                    int data;
-                    static void show() {
-                        // data = 10; // Error! Non-static in static
-                    }
-                }
+                // class Test {
+                //     int data;
+                //     static void show() {
+                //         // data = 10; // Error! Non-static in static
+                //     }
+                // }
 
 
     // static inside non-static
         // can use static members (variables/methods) inside non-static (instance) code
-            class Test2 {
-                static int x;
-                void display() {
-                    x = 5; // Allowed
-                }
-            }
+            // class Test2 {
+            //     static int x;
+            //     void display() {
+            //         x = 5; // Allowed
+            //     }
+            // }
     // this keyword inside static
         // cannot use this (refers to current object) inside static methods/blocks, because there’s no "current object" when calling static methods.
 
@@ -142,12 +142,12 @@ public class Intro {
 
     // inner classes✅
         // A class inside another class. Commonly used to group helper classes.
-            class Outer {
-                class Inner {
-                    void display() { System.out.println("I'm inner!"); }
-                }
-            }
-            Outer.Inner innerObj = new Outer().new Inner();
+            // class Outer {
+            //     class Inner {
+            //         void display() { System.out.println("I'm inner!"); }
+            //     }
+            // }
+            // Outer.Inner innerObj = new Outer().new Inner();
             // innerObj.display();
 
 
@@ -165,15 +165,15 @@ public class Intro {
     // singleton class
         // A design pattern to ensure only one instance of a class exists.
 
-            class Singleton {
-                private static Singleton instance = null;
-                private Singleton() {} // Private constructor
+            // class Singleton {
+            //     private static Singleton instance = null;
+            //     private Singleton() {} // Private constructor
 
-                // public static Singleton getInstance() {
-                //     if (instance == null) instance = new Singleton();
-                //     return instance;
-                // }
-                // }           //Any call to Singleton.getInstance() returns the same object.
+            //     public static Singleton getInstance() {
+            //         if (instance == null) instance = new Singleton();
+            //         return instance;
+            //     }
+            // }           //Any call to Singleton.getInstance() returns the same object.
 
 
 
@@ -226,5 +226,3 @@ public class Intro {
         // collections framework
         // vector class
         // enums 
-
-}
