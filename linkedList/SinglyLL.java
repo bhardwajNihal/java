@@ -24,10 +24,10 @@ public class SinglyLL {
         this.size = 0;
     }
 
-// insertion methods
+    // insertion methods
     public void insertAtHead(int val) {
         Node newNode = new Node(val);
-        if (head == null) {     // if head is null, LL is empty, simply point head & tail to this new node,
+        if (head == null) { // if head is null, LL is empty, simply point head & tail to this new node,
             head = newNode;
             tail = newNode;
             size += 1;
@@ -39,23 +39,29 @@ public class SinglyLL {
         size += 1;
 
     }
-    
-    public void insertAtTail(int val){
-        
+
+    public void insertAtTail(int val) {
+
         Node newNode = new Node(val);
-        if(tail==null){         // if tail is null, LL is empty, simply perform insert at head
+        if (tail == null) { // if tail is null, LL is empty, simply perform insert at head
             insertAtHead(val);
+            return;
         }
-        tail.next = newNode;    // else point tail's next to new node, then make new node as tail
+        tail.next = newNode; // else point tail's next to new node, then make new node as tail
         tail = newNode;
         size++;
     }
 
-    public void insertAtPosition(int val, int position){
+    public void insertAtPosition(int val, int position) {
+
+        if (position < 1 || position > size + 1) {
+            System.out.println("Invalid position");
+            return;
+        }
 
         Node newNode = new Node(val);
 
-          if (position == 1) {
+        if (position == 1) {
             insertAtHead(val);
             return;
         }
@@ -64,34 +70,35 @@ public class SinglyLL {
             return;
         }
 
-        Node temp = head;   
-        for(int i = 1; i< position-1; i++){
-            temp = temp.next;       // point temp to the previous node of the intended position
+        Node temp = head;
+        for (int i = 1; i < position - 1; i++) {
+            temp = temp.next; // point temp to the previous node of the intended position
         }
 
         // point new node's next to temp's next
         newNode.next = temp.next;
-        temp.next = newNode;        // point temp's next to new node, insert successful
+        temp.next = newNode; // point temp's next to new node, insert successful
         size++;
 
     }
 
-
-// deletion methods
-    public int deleteAtHead(){
+    // deletion methods
+    public int deleteAtHead() {
         int valueRm = head.value;
         head = head.next;
         // if head now points to null, point tail to null as well
-        if(head == null) {
+        if (head == null) {
             tail = null;
-        };  
+        }
+        ;
         size--;
         return valueRm;
     }
 
-    public int deleteAtTail(){
+    public int deleteAtTail() {
 
-        if(size <= 1) return deleteAtHead();
+        if (size <= 1)
+            return deleteAtHead();
 
         // 1st need a temp to point the 2nd last node
         Node temp = head;
@@ -100,14 +107,19 @@ public class SinglyLL {
         }
         // now as temp points to 2nd last node;
         int valueRemoved = temp.next.value;
-        temp.next = null;       // last node removed
+        temp.next = null; // last node removed
         size--;
-        return valueRemoved
-        ;
+        return valueRemoved;
 
     }
 
-    public int deleteAtPosition(int position){
+    public int deleteAtPosition(int position) {
+
+        if (position < 1 || position > size) {
+            System.out.println("Invalid position");
+            return -1;
+        }
+
         if (position == 1) {
             return deleteAtHead();
         }
@@ -117,8 +129,9 @@ public class SinglyLL {
 
         Node temp = head;
         int count = 1;
-        while (count < position-1) {
+        while (count < position - 1) {
             temp = temp.next;
+            count++;
         }
         // now as temp is at the previous node of the intended node
         int valueRemoved = temp.next.value;
@@ -152,21 +165,20 @@ public class SinglyLL {
         myLL.displayLL();
         System.out.println(myLL.size);
 
-        System.out.println("deletion at head");
-        System.out.println(myLL.deleteAtHead());
-        myLL.displayLL();
-        System.out.println(myLL.size);
+        // System.out.println("deletion at head");
+        // System.out.println(myLL.deleteAtHead());
+        // myLL.displayLL();
+        // System.out.println(myLL.size);
 
-        System.out.println("deletion at tail");
-        System.out.println(myLL.deleteAtTail());
-        myLL.displayLL();
-        System.out.println(myLL.size);
-        
-        System.out.println("deletion at position 2");
-        System.out.println(myLL.deleteAtPosition(2));
-        myLL.displayLL();
-        System.out.println(myLL.size);
+        // System.out.println("deletion at tail");
+        // System.out.println(myLL.deleteAtTail());
+        // myLL.displayLL();
+        // System.out.println(myLL.size);
 
+        System.out.println("deletion at position 3");
+        System.out.println(myLL.deleteAtPosition(3));
+        myLL.displayLL();
+        System.out.println(myLL.size);
 
     }
 }
