@@ -1,23 +1,24 @@
 package linkedList;
 
-class Node {
-
-    int value;
-    Node next;
-
-    public Node(int value) {
-        this.value = value;
-        this.next = null;
-    }
-
-}
-
 public class SinglyLL {
 
+// defining private class node
+    private class Node {
+        int value;
+        Node next;
+
+        public Node(int value) {
+            this.value = value;
+            this.next = null;
+        }
+    }
+
+// head, tail and size to track the linked list
     private Node head;
     private Node tail;
     private int size;
 
+    // constructor to initialize the LL
     public SinglyLL() {
         this.head = null;
         this.tail = null;
@@ -149,6 +150,7 @@ public class SinglyLL {
         }
         System.out.println("Null");
     }
+
 
     public static void main(String[] args) {
 
