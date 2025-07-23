@@ -2,6 +2,8 @@ package OOPs;
 
 import java.util.Objects;
 
+import OOPs.principals.inheritance.Child;
+
 // A class is a blue print to create objects
     // defines the structure and behaviour of the object.
     // Classes can include fields, methods, constructors, nested classes, and interfaces
