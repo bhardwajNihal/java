@@ -1,0 +1,99 @@
+1. Arrays 
+    • Two Sum - LeetCode #1 
+    • Best Time to Buy and Sell Stock - LeetCode #121 
+    • Product of Array Except Self - LeetCode #238 
+    • Subarray Sum Equals K - LeetCode #560 
+    • Merge Intervals - LeetCode #56 
+    • Find Minimum in Rotated Sorted Array - LeetCode #153 
+    • Max Consecutive Ones - LeetCode #485 
+    • Contains Duplicate - LeetCode #217 
+    • Majority Element - LeetCode #169 
+        
+
+2. Strings 
+    • Longest Substring Without Repeating Characters - LeetCode #3 
+    • Valid Anagram - LeetCode #242 
+    • Longest Palindromic Substring - LeetCode #5 
+    • Group Anagrams - LeetCode #49 
+    • Valid Parentheses - LeetCode #20 
+    • Implement strStr() - LeetCode #28 
+    • Longest Common Prefix - LeetCode #14 
+    • Count and Say - LeetCode #38 
+
+3. Linked List 
+    • Reverse Linked List - LeetCode #206 
+    • Merge Two Sorted Lists - LeetCode #21 
+    • Linked List Cycle - LeetCode #141 
+    • Remove Nth Node From End of List - LeetCode #19 
+    • Reorder List - LeetCode #143 
+    • Add Two Numbers - LeetCode #2 
+    • Intersection of Two Linked Lists - LeetCode #160 
+
+4. Stack 
+    • Valid Parentheses - LeetCode #20 
+    • Min Stack - LeetCode #155 
+    • Evaluate Reverse Polish Notation - LeetCode #150 
+    • Largest Rectangle in Histogram - LeetCode #84 
+    • Simplify Path - LeetCode #71 
+    • Next Greater Element I - LeetCode #496 
+
+5. Queue 
+    • Implement Queue using Stacks - LeetCode #232 
+    • Sliding Window Maximum - LeetCode #239 
+    • Design Circular Queue - LeetCode #622 
+    • Moving Average from Data Stream - LeetCode #346 
+    • Number of Recent Calls - LeetCode #933 
+    • Rotten Oranges - LeetCode #994 
+    6. Tree 
+    • Invert Binary Tree - LeetCode #226 
+    • Maximum Depth of Binary Tree - LeetCode #104 
+    • Binary Tree Level Order Traversal - LeetCode #102 
+    • Symmetric Tree - LeetCode #101 
+    • Lowest Common Ancestor of a Binary Search Tree - LeetCode #235 
+    • Construct Binary Tree from Preorder and Inorder Traversal - LeetCode #105 
+    • Serialize and Deserialize Binary Tree - LeetCode #297 
+
+7. Graph 
+    • Clone Graph - LeetCode #133 
+    • Number of Connected Components in an Undirected Graph - LeetCode #323 
+    • Course Schedule - LeetCode #207 
+    • Word Ladder - LeetCode #127 
+    • Pacific Atlantic Water Flow - LeetCode #417 
+    • Minimum Number of Vertices to Reach All Nodes - LeetCode #1557 
+    • Shortest Path in Binary Matrix - LeetCode #1091 
+
+8. Hashing 
+    • Two Sum - LeetCode #1 
+    • Subarray Sum Equals K - LeetCode #560 
+    • Longest Substring Without Repeating Characters - LeetCode #3 
+    • Group Anagrams - LeetCode #49 
+    • Top K Frequent Elements - LeetCode #347 
+    • Contains Duplicate - LeetCode #217 
+    • Minimum Window Substring - LeetCode #76 
+
+9. Heap 
+    • Kth Largest Element in an Array - LeetCode #215 
+    • Merge k Sorted Lists - LeetCode #23 
+    • Top K Frequent Elements - LeetCode #347 
+    • Find Median from Data Stream - LeetCode #295 
+    • Sliding Window Maximum - LeetCode #239 
+    • Minimize Deviation in Array - LeetCode #1675 
+
+10. Recursion and Backtracking 
+    • Subsets - LeetCode #78 
+    • Combination Sum - LeetCode #39 
+    • Permutations - LeetCode #46 
+    • N-Queens - LeetCode #51 
+    • Word Search - LeetCode #79 
+    • Generate Parentheses - LeetCode #22 
+    • Sudoku Solver - LeetCode #37 
+
+11. Dynamic Programming (DP) 
+    • Climbing Stairs - LeetCode #70 
+    • House Robber - LeetCode #198 
+    • Coin Change - LeetCode #322 
+    • Longest Increasing Subsequence - LeetCode #300 
+    • Longest Common Subsequence - LeetCode #1143 
+    • Edit Distance - LeetCode #72 
+    • Unique Paths - LeetCode #62 
+    • Partition Equal Subset Sum - LeetCode #416 

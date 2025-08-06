@@ -47,7 +47,7 @@ public class mathsQues {
     // same for 3, 5, so on. (not for 4 as it is already crossed as multiple of 2);
 
     // complexity:
-    // time : O(N)
+    // space : O(N)
     // time : O(n log(log n))       // n * harmonic progression (1/2 + 1/3 + ....)
     static void sieveOfErastosthenos(int num){
         boolean[] arr = new boolean[num+1];     // initially all values are false
@@ -73,7 +73,7 @@ public class mathsQues {
 
     // finding square root
         // there are two scenarios
-        // 1. for perfect square the logic is pretty straight forware
+        // 1. for perfect square the logic is pretty straight forward
             // i.e. if (mid * mid) == num , then ans = mid
             // if m*m < num, then end = mid-1, else start = mid + 1
             // resembles like binary search
