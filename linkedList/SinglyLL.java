@@ -3,9 +3,9 @@ package linkedList;
 public class SinglyLL {
 
 // defining private class node
-    private class Node {
-        int value;
-        Node next;
+    public class Node {
+        public int value;
+        public Node next;
 
         public Node(int value) {
             this.value = value;
@@ -14,9 +14,9 @@ public class SinglyLL {
     }
 
 // head, tail and size to track the linked list
-    private Node head;
-    private Node tail;
-    private int size;
+    public Node head;
+    public Node tail;
+    public int size;
 
     // constructor to initialize the LL
     public SinglyLL() {
