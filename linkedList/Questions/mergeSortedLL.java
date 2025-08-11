@@ -1,3 +1,4 @@
+package linkedList.Questions;
 
 import linkedList.SinglyLL;
 // import linkedList.SinglyLL.Node;
@@ -25,7 +26,7 @@ public class mergeSortedLL extends SinglyLL {
         while (temp1 != null) {
             ansList.insertAtTail(temp1.value);
             temp1 = temp1.next;
-        }
+        }   
         while (temp2 != null) {
             ansList.insertAtTail(temp2.value);
             temp2 = temp2.next;
