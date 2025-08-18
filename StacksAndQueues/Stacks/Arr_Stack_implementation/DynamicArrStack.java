@@ -27,7 +27,7 @@ public class DynamicArrStack extends CustomStack{
             }
 
             // finally replace original data to temp
-            data = temp;        // data is now updated
+            this.data = temp;        // data is now updated
         }
 
         // at this point it's assured the stack is not full,as if full the size is already doubled, simply call the push method of the parent class
