@@ -35,7 +35,7 @@ public class ReverseLL {
 
             prev = curr;
             curr = nextPtr;
-        }
+    }
 
         
         // display,

@@ -1,3 +1,5 @@
+package linkedList.Questions;
+
 import linkedList.SinglyLL;
 
 public class removeDuplicates extends SinglyLL {

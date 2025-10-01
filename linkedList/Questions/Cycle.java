@@ -1,4 +1,5 @@
-import org.w3c.dom.Node;
+package linkedList.Questions;
+
 
 import linkedList.SinglyLL;
 
