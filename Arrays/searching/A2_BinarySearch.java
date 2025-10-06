@@ -351,7 +351,7 @@ public class A2_BinarySearch {
     // i.e. end index in unknown, thus can't use the length attribute to determine end;
 
     // the approach is simple, 
-    // it's simple, the problem is simple binary search
+    // the problem is simple binary search
     // just need to figure out the end index.
     // start with a range of 2. i.e s=0, e=1,
     // >> then exponetially grow the range of search --> 2 > 4 > 8 > 16 ...

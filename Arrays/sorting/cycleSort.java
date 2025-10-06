@@ -29,7 +29,7 @@ public class cycleSort {
     // so the thought process is like 
     // at the 0th index --> ideally there should be 1, at 1th --> 2, at 2nd -->3
     // so starting from the very 1st index
-        // check if it has the rigth element
+        // check if it has the right element
         // if not, swap it with the element-1 index
         // ex - if arr[0] =4 ---> swap arr[0] with arr[3] --> as ideally 4 should be at index 3
                 // now if arr[0] becomes 2, then swap it with no. at index 1
@@ -102,7 +102,7 @@ public class cycleSort {
     // find all the missing element in a given array of size n, with element in the range [1,n];
     // there will be duplicate elements
 
-    // eg. for [4,6,2,1,2,4,] ===> o/p [3,5]
+    // eg. for [4,6,2,1,2,4] ===> o/p [3,5]
 
     // approach : apply cyclic sort,
         // if arr[i] != i+1 ---> swap(arr[i], i)        

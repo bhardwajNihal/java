@@ -45,26 +45,4 @@ public class bubbleSort {
             if(swapped == false) break;         // means no swap happened the array is already sorted, break out of the outer loop
         }
     }
-
-
-
-
-
-    static void selectionSortAlgo(int[] arr){
-
-        
-        for (int i = 0; i<arr.length; i++){  
-
-                int lastIdx = arr.length-i-1;
-
-                // find index of max element in the given range
-                int maxIdx = maxIdx(arr,lastIdx);
-
-                // swap it with last index of the range;
-                int temp = arr[maxIdx];
-                arr[maxIdx] = arr[lastIdx];
-                arr[lastIdx] = temp;
-
-        }
-    }
 }
