@@ -1,0 +1,77 @@
+
+THEORY:
+    - A tree is a non-linear data structure, which has nodes, and each node is has child nodes. Making a heirarchical structure.
+    - it represents one to many relationship of nodes. unlike other linear data structure like trees, linkedlist, stack, etc, where every data point is connected sequentially in a linear fashion.
+
+Terminologies 📖
+    Node: A fundamental unit of a tree, containing data and pointers to other nodes.
+
+    Root: The topmost node of a tree. It's the only node that doesn't have a parent.
+
+    Edge: A connection or link between two nodes.
+
+    Parent: A node that has one or more child nodes.
+
+    Child: A node that has a parent.
+
+    Sibling: Nodes that share the same parent.
+
+    Leaf: A node that doesn't have any children. Also known as an external node.
+
+    Internal Node: A node that has at least one child.
+
+    Subtree: A part of a tree that is itself a tree, rooted at one of the original tree's nodes.
+
+    Depth: The length of the path from the root to a specific node. The root node has a depth of 0.
+
+    Height: The length of the longest path from a node to a leaf. The height of a tree is the height of its root node.
+
+    Degree: The number of children a node has. The degree of a tree is the maximum degree of any node in the tree.
+
+
+
+Types of Trees 🌳
+
+    General Tree
+    This is the most basic tree structure. There are no restrictions on the number of children a node can have.
+
+    Binary Tree
+    In a binary tree, each node can have at most two children, a left child and a right child. This constraint makes them more efficient for many applications.
+
+    Binary Search Tree (BST)
+    A specialized type of binary tree where the nodes are arranged in a specific order. For every node:
+    The value of all nodes in its left subtree is less than the node's value.
+    The value of all nodes in its right subtree is greater than the node's value.
+    This property allows for efficient searching, insertion, and deletion operations.
+
+    Balanced Trees
+    These are binary search trees designed to maintain a relatively small height to ensure search efficiency. 
+    Examples include AVL trees and Red-Black trees. They perform self-balancing operations to prevent the tree from becoming skewed, which would degrade performance.
+
+
+
+Uses of Trees 🚀
+    Trees are widely used in computer science for a variety of tasks:
+
+    File Systems: A computer's file system is organized as a tree, with the root directory at the top, and subdirectories and files as children.
+
+    Syntax Analysis: Compilers use parse trees to represent the grammatical structure of code.
+
+    Database Indexing: B-Trees and B+ Trees are used in databases to efficiently store and retrieve data.
+
+    Decision Making: Decision trees are used in machine learning to model decisions and their possible consequences.
+
+    Networking: Routing algorithms use trees to find the most efficient path between network nodes.
+
+
+
+Properties of Trees ✅
+    Uniqueness of Path: There is a unique path from the root node to any other node.
+
+    Number of Edges: A tree with N nodes has exactly N−1 edges.
+
+    No Cycles: A tree is an acyclic graph, meaning it doesn't contain any closed loops.
+
+    Connectivity: A tree is a connected graph. Every node is reachable from every other node.
+
+    Recursive Definition: A tree can be defined recursively. Either it's empty, or it's a root node connected to one or more subtrees.
