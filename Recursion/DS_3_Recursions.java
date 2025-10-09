@@ -1,4 +1,4 @@
-package Recursion;
+
 import java.util.Arrays;
 
 public class DS_3_Recursions {
@@ -33,11 +33,35 @@ public class DS_3_Recursions {
         // reverse2(1234);
         // System.out.println(rev);
 
-        System.out.println(palindromeNum(1233521));
+        // System.out.println(palindromeNum(1233521));
+
+
+        // System.out.println(powerOpt( 2,1));
+        // multiples(5, 10);
+
+        System.out.println(sumAlt(11));
 
     }
 
 
+    // given num, and k : print 1st k multiples of num
+    static void multiples(int num, int k){
+
+        if(k ==0) return;
+
+        multiples(num, k-1);
+        System.out.print(num*k + " ");
+    }
+
+    // given n, return sum, with alternate sign
+    // e.g. n = 5; ===> 1-2+3-4+5
+    static int sumAlt(int n){
+
+        if(n ==0) return 0;
+
+        if(n%2==1) return sumAlt(n-1) + n;
+        else return sumAlt(n-1) - n;
+    }
 
 
     // two points to consider about function calls before jumping on to recursion.
@@ -115,9 +139,10 @@ public class DS_3_Recursions {
     static int fibonacci(int num){
 
         // base cases 
-        if(num == 0) return 0;
-        if(num == 1) return 1;
+        if(num == 0 || num == 1) return num;
 
+    // every term is the fibo series, is the sum of previous two fibo numbers
+    // so, repeatedly call for the sum of previous two fibo numbers, and rest will be taken care of by recursion
         return fibonacci(num - 1) + fibonacci(num - 2); 
     }
 
@@ -143,6 +168,7 @@ public class DS_3_Recursions {
     }
 
 
+    
 
     // printing n to 1 
     static void printnto1(int n){
@@ -266,6 +292,27 @@ public class DS_3_Recursions {
 
         reverse2(num);
         return rev == num;
+    }
+
+    // find a^b using recursion
+    static int power(int a, int b){
+
+        if(b==0) return 1;
+
+        return a * power(a, b-1);
+    }
+
+    // optimal approach
+    static int powerOpt(int a, int b){
+
+        if(b==0) return 1;
+
+        if(b%2==0){
+            return powerOpt(a, b/2) * powerOpt(a, b/2); 
+        }
+        else{
+            return a * powerOpt(a, b/2) * powerOpt(a, b/2); 
+        }
     }
     
 }       

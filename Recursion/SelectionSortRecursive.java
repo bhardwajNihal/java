@@ -1,4 +1,4 @@
-package Recursion;
+
 
 import java.util.Arrays;
 
@@ -10,7 +10,7 @@ public class SelectionSortRecursive {
     public static void main(String[] args) {
         
         int[] arr = {};
-        SelectionSortRecursiveAlgo(arr,0,arr.length-1);
+        SelectionSortRecursiveAlgo(arr,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
 

@@ -1,16 +1,26 @@
-package Recursion;
+
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class recursionOnArrays {
     
     public static void main(String[] args) {
-        
-        int[] arr = {1,1,1,20,23,14,16,1,5};
-        ArrayList<Integer> ansArr = new ArrayList<>();
-        // System.out.println(isSorted(arr, 0));
-        System.out.println(ListAllOccurances(arr,1,0,ansArr));
-        System.out.println(ListAllOccurances2(arr,1,0));
+
+        int[] arr = {0,1,2,3};
+        // ArrayList<Integer> ansArr = new ArrayList<>();
+        // // System.out.println(isSorted(arr, 0));
+        // System.out.println(ListAllOccurances(arr,1,0,ansArr));
+        // System.out.println(ListAllOccurances2(arr,1,0));
+        // printArr(arr, 0);
+        // System.out.println();
+        // System.out.println(sum(arr, 0));
+        // System.out.println(max(arr, 0));
+        // System.out.println(LS(arr, 1, 0));
+
+        List<Integer> ans = new ArrayList<>();
+        System.out.println(allOccurances(arr, 2, 0, ans));
     }
 
 
@@ -108,5 +118,48 @@ public class recursionOnArrays {
 
     }
 
+
+
+    // revision
+    static void printArr(int arr[], int idx){
+
+        if(idx == arr.length) return;
+
+        System.out.print(arr[idx] + " ");
+        printArr(arr, idx+1);
+    }
+
+    static int sum(int arr[], int idx){
+
+        if(idx == arr.length) return 0;
+
+        return arr[idx] + sum(arr, idx+1);
+
+    }
+
+    static int max(int[] arr, int idx){
+
+        if(idx == arr.length-1) return arr[idx];
+
+        return Integer.max(arr[idx], max(arr, idx+1));
+    }
+
+    static boolean LS(int arr[], int target, int idx){
+
+        if(idx == arr.length) return false;
+
+        return arr[idx]==target || LS(arr, target, idx+1);
+
+    }
+
+    static List<Integer> allOccurances(int arr[], int target, int idx, List<Integer> ans){
+
+        if(idx == arr.length) return ans;
+
+        if(arr[idx]== target) ans.add(idx);
+
+        return allOccurances(arr, target, idx+1, ans);
+
+    }
 
 }
