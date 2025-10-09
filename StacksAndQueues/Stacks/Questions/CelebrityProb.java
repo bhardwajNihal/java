@@ -1,3 +1,7 @@
+package StacksAndQueues.Stacks.Questions;
+
+import java.util.Stack;
+
 public class CelebrityProb {
     
 public int celebrity(int mat[][]) {
@@ -15,7 +19,7 @@ public int celebrity(int mat[][]) {
             int p1 = st.pop();
             int p2 = st.pop();
             
-            if(mat[p1][p2] == 0){   // p1, doesn't know p2, then p2 is surely not a celebrity
+            if(mat[p1][p2] == 0){   // p1 doesn't know p2, then p2 is surely not a celebrity
                 //but p1 is potential, push is back
                 st.push(p1);
             }
@@ -24,7 +28,7 @@ public int celebrity(int mat[][]) {
             }
         }
         
-        if(st.size() = 0) return -1;        // if stack becomes empty, no potential
+        if(st.size() == 0) return -1;        // if stack becomes empty, no potential
         // at this point we have only one index in the stack, which is the potential one
         
         for(int i =0; i<mat[st.peek()].length; i++){
