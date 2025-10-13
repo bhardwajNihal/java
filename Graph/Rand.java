@@ -9,15 +9,22 @@ public class Rand {
     public static void main(String[] args) {
         
 
-        int[] arr = new int[5];
+        // int[] arr = new int[5];
 
-        Arrays.fill(arr, -1);
-        for(int ele : arr){
-            System.out.println(ele + " ");
-        }
+        // Arrays.fill(arr, -1);
+        // for(int ele : arr){
+        //     System.out.println(ele + " ");
+        // }
 
 
-        Queue<Integer> que = new linkedList<>();
-        que.add(null)
+        // Queue<Integer> que = new linkedList<>();
+        // que.add(null);
+
+        String str = "hello world";
+
+        System.out.println(str.length());
+        str.substring(0);
+
+        System.out.println(str.charAt(0)== 'h');
     }
 }
