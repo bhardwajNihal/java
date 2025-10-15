@@ -33,7 +33,7 @@ public class Intro {
         System.out.println(s.charAt(1));
 
         // methods
-        // map.put("ram", 1);
+        // map.put("ram", 1); 
         // map.put("mar", 2);
         // map.put("arm", 3);
         // map.put("rma", 4);

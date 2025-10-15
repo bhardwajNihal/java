@@ -1,6 +1,8 @@
 package Graph;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Queue;
 
 public class Rand {
@@ -26,5 +28,14 @@ public class Rand {
         str.substring(0);
 
         System.out.println(str.charAt(0)== 'h');
+
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int key : map.keySet()){
+            if(map.get(key) == 0)
+        }
+
+
+        Integer.MAX_VALUE 
     }
 }
