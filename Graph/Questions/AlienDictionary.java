@@ -1,13 +1,6 @@
 package Graph.Questions;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class AlienDictionary {
     
@@ -37,7 +30,7 @@ public class AlienDictionary {
         }
         
          // indegeree map
-        // maintaining a map, because nodes are node linear
+        // maintaining a map, because nodes are non linear
         // it can be anywhere around 0 to 25, corresponding to alphabets
         Map<Integer, Integer> indegree = new HashMap<>();
         for (char ch : set) {           // adding each char
@@ -75,11 +68,11 @@ public class AlienDictionary {
                     // using typecasting to get corresponding integer values of char
                     int u = l1 - 'a';
                     int v = l2 - 'a';
-                    if (!graph.get(u).contains(v)) {
+                    if (!graph.get(u).contains(v)) { //avoiding adding again
                         graph.get(u).add(v);
                         indegree.put(v, indegree.get(v) + 1);
                     }
-                    break;
+                    break;          // if 1st msmatch found no need to furthur iterate
                     
                 }
             }

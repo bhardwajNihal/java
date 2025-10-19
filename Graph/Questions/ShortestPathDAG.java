@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-public class ShortestPath {
+public class ShortestPathDAG {
     
 
-     // approach
+    // approach
     
     // adj list of the graph will contain pairs, with neighbours along with their edge weight
     
