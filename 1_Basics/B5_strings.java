@@ -7,11 +7,12 @@ public class B5_strings {
     public static void main(String[] args) {
         
         // can be defined both ways
-            // String name = "nihal learns java";               // as normal datatype
-            // String name1 = new String("nihal");     // as an object instance
-            // name1 = "hello";
-            // System.out.println(name);
-            // System.out.println(name1);
+            String name = "nihal learns java";               // as normal datatype
+            String name1 = new String("nihal");     // as an object instance
+            // name1 = "hello";             // reassignment, creates a new object and puts the new value to it, the original object remain unaffected, as string is immutable
+            // name = "hello";
+            System.out.println(name);
+            System.out.println(name1);
 
 
 
