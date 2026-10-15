@@ -111,7 +111,6 @@ public class B2_Fundamentals {
     char decryptedGrade = (char)(encryptedGrade - 8);    // int + char --> gives char as a result
     System.out.println(decryptedGrade);
 
-
 // (v*v - u*u)/2*a*s
 
     }
