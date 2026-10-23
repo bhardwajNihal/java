@@ -1,5 +1,6 @@
 package A2Z_sheet.Arrays.Basic;
 
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -45,5 +46,73 @@ public class unionOf2sortedArr {
 
         // Arrays.sort(ans);        // no need in case of treeSet, only in case of HashSet
         return ans;
+    }
+
+
+
+
+    
+// optimal approach
+    // using two pointers
+    // simultaneously track elements of both the unionArray
+    // add the smaller element
+    // if equal increment one of the pointer
+
+    // tc = O(m+n)
+    // sc = O(k)
+
+    public int[] unionArray_optimal(int[] nums1, int[] nums2) {
+        
+        int i = 0; 
+        int j = 0;
+
+        ArrayList<Integer> union = new ArrayList<>();
+
+        while(i < nums1.length && j < nums2.length){
+
+            int currentEle;
+            if(nums1[i] == nums2[j]){
+                currentEle = nums1[i];
+                i++;
+                j++;
+            }
+            else if(nums1[i] < nums2[j]){
+                currentEle = nums1[i];
+                i++;
+            }
+            else{
+               currentEle = nums2[j];
+                j++;
+            }
+
+            // lastly check if the ele is already added to the last
+            // checking last ele would suffice, as eles are sorted
+            // does the work in constant time, rather O(n) of linear search everytime
+
+            if(union.isEmpty() || union.get(union.size()-1) != currentEle) union.add(currentEle);
+
+        }
+
+        // now if any of the array is exhausted
+        // simply add the other array's ele serially
+
+        while(i<nums1.length){
+            if(union.isEmpty() || union.get(union.size()-1) != nums1[i]) union.add(nums1[i]);
+            i++;
+        }
+
+        while(j<nums2.length){
+            if(union.isEmpty() || union.get(union.size()-1) != nums2[j]) union.add(nums2[j]);
+            j++;
+        }
+
+
+        // lastly copy eles of list to an array to return int
+        int[] ans = new int[union.size()];
+        for(int k = 0; k<union.size(); k++){
+            ans[k] = union.get(k);
+        }
+        return ans;
+
     }
 }
