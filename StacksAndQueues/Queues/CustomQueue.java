@@ -54,6 +54,18 @@ public class CustomQueue {
             return removed;
         }
 
+        // more optimal will
+        // for remove operation, 
+            // just maintain the start pointer also
+            // in case of remove(), start++, 
+            //incase of peek just return arr[start].
+            // this makes this whole operation O(1)
+            // the queue then becomes empty, once start pointer overtakes end
+
+        // but that wastes the intial empty spaces
+        // that throws queue full error,even array has initial space empty
+        // this is where circular queue comes in.
+
 
         // isempty
         public boolean isEmpty(){
@@ -62,7 +74,7 @@ public class CustomQueue {
         // isfull
         public boolean isfull(){
             return end == data.length;
-        }
+        } 
 
         // front
         public int front() throws Exception{
