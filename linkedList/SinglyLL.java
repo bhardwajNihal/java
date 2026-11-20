@@ -3,11 +3,9 @@ package linkedList;
 public class SinglyLL {
 
 // defining private class node
-    public class Node {
+    private class Node {
         public int value;
         public Node next;
-        public Object left;
-        public Object right;
 
         public Node(int value) {
             this.value = value;
